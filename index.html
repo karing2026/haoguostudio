@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浩果科技 | 独立技术工坊 - Haoguo Tech Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brand-primary: #3b82f6;
+            --bg-dark: #0a0a0a;
+        }
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background-color: var(--bg-dark);
+            color: #f1f1f1;
+            letter-spacing: -0.01em;
+        }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        
+        /* 极简网格背景 */
+        .grid-bg {
+            background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.03) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .hover-lift {
+            transition: transform 0.3s cubic-bezier(0.2, 0, 0, 1), border-color 0.3s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-4px);
+            border-color: rgba(59, 130, 246, 0.4);
+        }
+
+        /* 文字渐变 */
+        .text-gradient {
+            background: linear-gradient(to right, #fff, #94a3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="grid-bg">
+
+    <!-- 导航 -->
+    <nav class="fixed top-0 w-full z-50 border-b border-white/5 bg-black/50 backdrop-blur-md">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-7 h-7 bg-blue-600 rounded flex items-center justify-center font-bold text-sm">H</div>
+                <span class="font-bold tracking-tight text-lg">浩果科技 <span class="text-blue-500 text-xs ml-1 font-mono">STUDIO</span></span>
+            </div>
+            <div class="hidden md:flex gap-8 text-sm text-gray-400 font-medium">
+                <a href="#services" class="hover:text-white transition">服务方案</a>
+                <a href="#projects" class="hover:text-white transition">交付案例</a>
+                <a href="#about" class="hover:text-white transition">关于工坊</a>
+                <a href="#contact" class="text-blue-500 hover:text-blue-400 transition">即刻咨询</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 英雄区 -->
+    <section class="pt-40 pb-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-blue-500/20 bg-blue-500/5 text-blue-400 text-xs font-mono mb-8">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                </span>
+                AVAILABLE FOR NEW PROJECTS
+            </div>
+            <h1 class="text-5xl md:text-8xl font-bold mb-8 leading-[1.1] tracking-tighter">
+                <span class="text-gradient">追求纯粹的</span><br>
+                数字工程实践
+            </h1>
+            <p class="text-gray-400 text-lg md:text-xl max-w-2xl leading-relaxed mb-12">
+                浩果科技（Haoguo Tech）是一家专注于 <span class="text-white">人工智能落地、架构设计与高性能开发</span> 的精品技术工作室。我们不追求规模，只追求每一行代码的精确与优雅。
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="#contact" class="px-8 py-4 bg-white text-black rounded-lg font-semibold hover:bg-gray-200 transition text-center">启动您的项目</a>
+                <a href="#projects" class="px-8 py-4 glass rounded-lg font-medium hover:bg-white/5 transition text-center">浏览历史交付</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 工作室特性 - 简洁版 -->
+    <section id="services" class="py-24 border-y border-white/5">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div>
+                    <h3 class="text-blue-500 font-mono text-xs uppercase tracking-widest mb-4">01. 深度定制</h3>
+                    <h4 class="text-2xl font-bold mb-4">AI 业务集成</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed">
+                        不仅是调用 API。我们提供从私有化部署、模型微调到 RAG 知识库构建的全栈 LLM 落地方案，让 AI 真正深入业务逻辑。
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-blue-500 font-mono text-xs uppercase tracking-widest mb-4">02. 稳健底座</h3>
+                    <h4 class="text-2xl font-bold mb-4">高可靠分布式架构</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed">
+                        基于云原生技术栈，为初创团队或特定业务设计高性能、可扩展的系统底座，拒绝过度设计，只为增长而生。
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-blue-500 font-mono text-xs uppercase tracking-widest mb-4">03. 工匠交付</h3>
+                    <h4 class="text-2xl font-bold mb-4">全栈产品原型</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed">
+                        从 Idea 到 MVP，我们提供极速但高质量的工程实现。通过模块化开发，帮助客户在数周内完成产品上线。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 项目展示 -->
+    <section id="projects" class="py-24 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex justify-between items-end mb-16">
+                <h2 class="text-3xl font-bold">工作室案例</h2>
+                <p class="text-gray-500 font-mono text-sm">/ 2024-2025 SELECTED WORK</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- 案例 1 -->
+                <div class="group cursor-pointer">
+                    <div class="aspect-[16/10] bg-zinc-900 rounded-2xl mb-6 overflow-hidden border border-white/5 group-hover:border-blue-500/30 transition-all">
+                        <div class="w-full h-full bg-gradient-to-br from-blue-600/10 to-transparent p-12 flex items-center justify-center">
+                            <span class="text-6xl font-bold opacity-10 font-mono">FIN-TECH</span>
+                        </div>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2 flex items-center gap-2">
+                        量化交易执行系统
+                        <svg class="w-4 h-4 text-blue-500 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                        </svg>
+                    </h4>
+                    <p class="text-gray-500 text-sm">毫秒级延迟控制，支持多种协议集成，采用 Rust 高性能内核。</p>
+                </div>
+
+                <!-- 案例 2 -->
+                <div class="group cursor-pointer">
+                    <div class="aspect-[16/10] bg-zinc-900 rounded-2xl mb-6 overflow-hidden border border-white/5 group-hover:border-blue-500/30 transition-all">
+                        <div class="w-full h-full bg-gradient-to-br from-emerald-600/10 to-transparent p-12 flex items-center justify-center">
+                            <span class="text-6xl font-bold opacity-10 font-mono">LMS-AI</span>
+                        </div>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2 flex items-center gap-2">
+                        企业级知识库治理平台
+                        <svg class="w-4 h-4 text-blue-500 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                        </svg>
+                    </h4>
+                    <p class="text-gray-500 text-sm">结合向量数据库与混合检索技术，显著提升企业内部文档查询准确度。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于工作室 -->
+    <section id="about" class="py-24 bg-white/[0.02] border-y border-white/5 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-xs font-mono text-blue-500 uppercase tracking-widest mb-6">Our DNA</h2>
+            <p class="text-2xl md:text-3xl font-medium leading-relaxed mb-12">
+                “浩果”取自“广浩之学，求实之果”。我们是一个由核心架构师、算法工程师组成的<span class="text-white">小而美</span>的技术单元，坚持<span class="text-white">直接对接需求负责人</span>，省去冗长的沟通链路，让技术回归解决问题的本源。
+            </p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="text-3xl font-bold mb-1">99%</div>
+                    <div class="text-gray-500 text-xs uppercase font-mono">项目交付率</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold mb-1">5+</div>
+                    <div class="text-gray-500 text-xs uppercase font-mono">核心领域专家</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold mb-1">24/7</div>
+                    <div class="text-gray-500 text-xs uppercase font-mono">运维响应</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold mb-1">100%</div>
+                    <div class="text-gray-500 text-xs uppercase font-mono">独立原创代码</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系 -->
+    <section id="contact" class="py-32 px-6">
+        <div class="max-w-4xl mx-auto glass rounded-3xl p-12 md:p-20 text-center">
+            <h2 class="text-4xl font-bold mb-8">开启深度合作</h2>
+            <p class="text-gray-400 mb-12">
+                无论您是寻求技术方案咨询，还是需要定制化的产品开发，浩果科技都准备好为您提供专业支持。
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+                <a href="mailto:contact@haoguo.tech" class="text-xl font-bold text-white border-b-2 border-blue-500 pb-1 hover:text-blue-400 transition">
+                    contact@haoguo.studio
+                </a>
+                <span class="hidden md:block text-gray-700">|</span>
+                <span class="text-gray-400 font-mono text-lg">微信: HAOGUO-TECH</span>
+            </div>
+            
+            <div class="mt-12 pt-12 border-t border-white/5 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-gray-500">
+                <div class="flex items-center justify-center gap-2">
+                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M5 13l4 4L19 7"/></svg>
+                    架构设计咨询
+                </div>
+                <div class="flex items-center justify-center gap-2">
+                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M5 13l4 4L19 7"/></svg>
+                    AI 应用开发
+                </div>
+                <div class="flex items-center justify-center gap-2">
+                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M5 13l4 4L19 7"/></svg>
+                    老旧系统重构
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="py-12 px-6 border-t border-white/5">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-gray-500 text-sm">
+                © 2026 浩果科技工坊. 
+                <span class="ml-4 font-mono text-[10px] tracking-widest uppercase">Precision & Performance.</span>
+            </div>
+            <div class="flex gap-6 text-gray-500 text-sm">
+                <a href="#" class="hover:text-white transition">Github</a>
+                <a href="#" class="hover:text-white transition">Zhihu</a>
+                <a href="#" class="hover:text-white transition">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 极简出场动画
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section');
+            const options = { threshold: 0.1 };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, options);
+
+            sections.forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(20px)';
+                section.style.transition = 'all 0.8s cubic-bezier(0.2, 0, 0, 1)';
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
